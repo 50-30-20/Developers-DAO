@@ -109,7 +109,7 @@ const UserAvatar = ({ username }) => {
         {
           kind: TezosOperationType.TRANSACTION,
           destination: wad, // Send to ourselves
-          amount: amount, // Amount in mutez, the smallest unit in Tezos
+          amount: amount * 10**6, // Amount in mutez, the smallest unit in Tezos
         },
       ],
     });
