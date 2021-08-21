@@ -22,5 +22,7 @@
 ## Registeration Page
 <img src="https://i.ibb.co/SJtQrs1/register-Tezos.png" /><br/>
 
+## Qna And Tipping Page
+<img src="https://i.ibb.co/Z6KR0zM/Que-Ans-Tezos.png" /><br/>
 
 
