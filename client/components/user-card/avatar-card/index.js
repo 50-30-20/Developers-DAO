@@ -59,29 +59,12 @@ const UserAvatar = ({ username }) => {
   }
   wallett();
 
-  // function copyTextToClipboard(text) {
-  //   if (!navigator.clipboard) {
-  //       fallbackCopyTextToClipboard(text);
-  //       return;
-  //   }
-  //   navigator.clipboard.writeText(text).then(function() {
-  //       console.log('Async: Copying to clipboard was successful!');
-  //   }, function(err) {
-  //       console.error('Async: Could not copy text: ', err);
-  //   });
-  // }   
-  
-  // function copyPP(){
-  //   copyTextToClipboard(wallet);
-  //   // alert('Wallet Address copied')
-  // }
-
   const tran = async () =>{
     try {
       console.log("Requesting permissions...");
       const permissions = await dAppClient.requestPermissions({
         network: {
-          type: NetworkType.EDONET,
+          type: NetworkType.FLORENCENET,
         },
       });;
       // console.log("Got permissions:", permissions.address.toString());
