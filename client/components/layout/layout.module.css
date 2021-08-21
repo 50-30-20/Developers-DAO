@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   min-height: calc(100vh - 50px);
+  margin-left: -50px;
 
   @media (--m) {
     grid-template-columns: 164px 1fr;

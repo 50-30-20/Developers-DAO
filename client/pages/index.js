@@ -12,6 +12,8 @@ import PageTitle from '../components/page-title'
 import ButtonGroup from '../components/button-group'
 import { Spinner } from '../components/icons'
 
+
+
 const HomePage = () => {
   const router = useRouter()
 
@@ -55,7 +57,7 @@ const HomePage = () => {
     <Layout>
       <Head>
         <title>
-          {router.query.tag ? router.query.tag : 'Questions'} - Clone of
+          {router.query.tag ? router.query.tag : 'Questions'} - Tezos
           Stackoverflow
         </title>
       </Head>

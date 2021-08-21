@@ -11,6 +11,23 @@ import Button from '../../button'
 
 import styles from './signup-form.module.css'
 
+import { TezosToolkit } from '@taquito/taquito';
+import { ThanosWallet } from '@thanos-wallet/dapp';
+
+
+const Tezos = new TezosToolkit('https://testnet-tezos.giganode.io');
+
+const connectWallet =()=> ThanosWallet.isAvailable()
+  .then(() => {
+    const mywallet = new ThanosWallet('MyAwesomeDapp');
+    mywallet.connect('granadanet').then(() => {
+      Tezos.setWalletProvider(mywallet);
+      return mywallet.getPKH()}).then((pkh) => {
+     console.log(`Your address: ${pkh}`);
+    });
+  })
+  .catch((err) => console.log(err));
+
 const SignupForm = () => {
   const { setAuthState } = useContext(AuthContext)
   const { setIsComponentVisible } = useContext(ModalContext)
@@ -19,7 +36,7 @@ const SignupForm = () => {
 
   return (
     <Formik
-      initialValues={{ username: '', password: '', passwordConfirmation: '' }}
+      initialValues={{ username: '', password: '', passwordConfirmation: '', walletAddress: '' }}
       onSubmit={async (values, { setStatus, resetForm }) => {
         setLoading(true)
         try {
@@ -38,6 +55,9 @@ const SignupForm = () => {
           .required('Required')
           .max(16, 'Must be at most 16 characters long')
           .matches(/^[a-zA-Z0-9_-]+$/, 'Contains invalid characters'),
+        walletAddress: Yup.string()
+          .required('Required')
+          .max(26, 'Must be at most 16 characters long'),
         password: Yup.string()
           .required('Required')
           .min(6, 'Must be at least 6 characters long')
@@ -69,6 +89,17 @@ const SignupForm = () => {
             onBlur={handleBlur}
             hasError={touched.username && errors.username}
             errorMessage={errors.username && errors.username}
+          />
+           <FormInput
+            label="Wallet Address"
+            type="text"
+            name="walletAddress"
+            autoComplete="off"
+            value={values.walletAddress}
+            onChange={handleChange}
+            onClick={connectWallet}
+            hasError={touched.walletAddress && errors.walletAddress}
+            errorMessage={errors.walletAddress && errors.walletAddress}
           />
           <FormInput
             label="Password"

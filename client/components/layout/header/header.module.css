@@ -9,9 +9,9 @@
   z-index: 3;
   background-color: var(--black-025);
   transition: box-shadow cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s;
-  height: 50px;
+  height: 60px;
   box-sizing: border-box;
-  border-top: 3px solid var(--orange);
+  border-top: 4px solid rgb(59, 76, 230);
 }
 
 .container {
@@ -46,19 +46,20 @@
 .logo {
   display: flex;
   align-items: center;
-  margin-left: 0;
+  margin-left: 0px;
   height: 100%;
-  padding: 0 8px;
+  padding: 0 1px;
   font-size: 22px;
   color: var(--black-800);
   font-family: sans-serif;
+  margin-top: 1px;
 
   &:hover {
     color: var(--black-700);
   }
 
   @media (--m) {
-    margin-left: 5px;
+    margin-left: -30px;
   }
 
   p {
@@ -89,12 +90,27 @@
 
 .userInfo {
   display: grid;
-  grid-template-columns: 1fr 43px;
+  grid-template-columns: 1fr 90px;
   grid-gap: 5px;
   margin-right: 5px;
+  font-size: 29px;
 
   p {
     padding-right: 5px;
     border-right: 1px solid var(--black-200);
   }
+
+}
+.logo{
+  font-size: 32px;
+}
+
+.logout{
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.tezos{
+  color:rgb(0, 26, 255);
+  margin-right: 10px;
 }

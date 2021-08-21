@@ -65,3 +65,37 @@
     color: var(--red-500);
   }
 }
+
+.reward{
+  width: 80px;
+  height: 30px;
+  /* background-color: #459ae0; */
+  background-color: #0080FF;
+  margin-top: 5px;
+  border-radius: 10%;
+}
+
+.reward{
+  a{
+    color: white;
+  }
+}
+
+.reward:hover{
+  background-color: #0072e4;
+}
+
+.mint{
+  width: 80px;
+  height: 30px;
+  background-color: rgb(67, 65, 230);
+  margin-top: 5px;
+  border-radius: 10%;
+  margin-top: 10px;
+  color: white;
+}
+
+.mint:hover{
+  cursor: pointer;
+  background-color: rgb(41, 38, 233);
+}

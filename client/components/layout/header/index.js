@@ -3,7 +3,9 @@ import Link from 'next/link'
 import cn from 'classnames'
 // import logoPng from './Tezos_logo.png'
 // import ImageLoader from 'react-load-image';
-
+// import logo from './tezos-coin.svg';
+import logosvg from '../../icons/Logo';
+ 
 import useComponentVisible from '../../../hooks/useComponentVisible'
 import useWindowSize from '../../../hooks/useWindowSize'
 import CONST from '../../../constants'
@@ -51,9 +53,9 @@ const Header = ({ className, ...props }) => {
           {/* <ImageLoader src={logoPng}><img /></ImageLoader> */}
           {/* <img src={logoPng} alt=''/> */}
     
-          <p><img src="./Tezos_logo.png" />
-            Tezos stack<span>overflow</span>
-          </p>
+          <p className={styles.logo}><img src={'https://akashghost.github.io/hostedassets/tezos-coin.svg'} alt='svg' width = '55' height = '55' /></p>
+          
+          <span className={styles.tezos}>Tezos</span> stack<span>overflow</span>
         </Button>
         <div style={{ flex: 1 }}></div>
 
@@ -61,14 +63,14 @@ const Header = ({ className, ...props }) => {
           <div className={styles.userInfo}>
             <p>
               Welcome{' '}
-              <Link
+              <Link 
                 href="/users/[user]"
                 as={`/users/${authState.userInfo.username}`}
               >
                 <a>{authState.userInfo.username}!</a>
               </Link>
             </p>
-            <a onClick={() => logout()}>log out</a>
+            <a className={styles.logout} onClick={() => logout()}>log out</a>
           </div>
         ) : (
           <>

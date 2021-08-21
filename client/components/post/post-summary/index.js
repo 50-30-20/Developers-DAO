@@ -12,10 +12,10 @@ import React, { useContext, Dispatch, SetStateAction, useState, useEffect } from
 
 import styles from './post-summary.module.css'
 
-import { TezosToolkit } from '@taquito/taquito';
-import { ThanosWallet } from '@thanos-wallet/dapp';
+// import { TezosToolkit } from '@taquito/taquito';
+// import { ThanosWallet } from '@thanos-wallet/dapp';
 
-const Tezos = new TezosToolkit('https://testnet-tezos.giganode.io');
+// const Tezos = new TezosToolkit('https://testnet-tezos.giganode.io');
 
 const PostSummary = ({
   tags,
@@ -48,16 +48,16 @@ const PostSummary = ({
     }
   }
 
- const connectWallet = () => ThanosWallet.isAvailable()
-  .then(() => {
-    const mywallet = new ThanosWallet('MyAwesomeDapp');
-    mywallet.connect('granadanet').then(() => {
-      Tezos.setWalletProvider(mywallet);
-      return mywallet.getPKH()}).then((pkh) => {
-     console.log(`Your address: ${pkh}`);
-    });
-  })
-  .catch((err) => console.log(err));
+// ThanosWallet.isAvailable()
+//   .then(() => {
+//     const mywallet = new ThanosWallet('MyAwesomeDapp');
+//     mywallet.connect('granadanet').then(() => {
+//       Tezos.setWalletProvider(mywallet);
+//       return mywallet.getPKH()}).then((pkh) => {
+//      console.log(`Your address: ${pkh}`);
+//     });
+//   })
+//   .catch((err) => console.log(err));
   
 
   return (
@@ -100,10 +100,12 @@ const PostSummary = ({
           </div>
         )}
       </div>
-
-      <div><a onClick={connectWallet}>Reward</a></div>
-      
-      <div><button onClick={()=> console.log('btn mint')}>Mint</button></div>
+      <button className={styles.reward}>
+        <Link href="/users/[user]" as={`/users/${author.username}`}>
+          <a>Reward</a>
+        </Link> 
+       </button>
+      <div><button className={styles.mint} onClick={()=> console.log('btn mint')}>Mint</button></div>
     </div>
     
   )

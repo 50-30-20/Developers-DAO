@@ -1,5 +1,9 @@
 .nav {
-    top: 74px;
+    top: 94px;
     position: sticky;
     width: auto;
 }
+
+/* .nav-stack{
+    font-size: 22px;
+} */
