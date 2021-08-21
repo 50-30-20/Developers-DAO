@@ -49,4 +49,7 @@
 7. yarn start / npm run start
 ```
 
+## Florence transactions
+1. https://florencenet.tzkt.io/oniaeYaXQ3C9C7iq7JVkbChiFb35bS89SbG1pcq7yw1iHeJ8HH4
+2. https://florencenet.tzkt.io/oo976ieZjML7XBwWESqAUYvZspADQYac2FjwpzX11rtQv8qLXFt
 
