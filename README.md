@@ -17,5 +17,10 @@
 <img src="https://i.ibb.co/6FnMvDG/Main-PTezos.png" /><br/>
 
 ## Temple Wallet Connection
-<img src=" https://i.ibb.co/TLx0Pxh/Con-Wallet-Tezos.png" /><br/>
+<img src="https://i.ibb.co/TLx0Pxh/Con-Wallet-Tezos.png" /><br/>
+
+## Registeration Page
+<img src="https://i.ibb.co/SJtQrs1/register-Tezos.png" /><br/>
+
+
 
