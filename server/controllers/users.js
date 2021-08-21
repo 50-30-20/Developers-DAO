@@ -14,11 +14,14 @@ exports.signup = async (req, res) => {
   try {
     const { username } = req.body;
 
+    const { walletAddress } = req.body;
+
     const hashedPassword = await hashPassword(req.body.password);
 
     const userData = {
       username: username.toLowerCase(),
-      password: hashedPassword
+      password: hashedPassword,
+      walletAddress: walletAddress
     };
 
     const existingUsername = await User.findOne({
@@ -39,13 +42,14 @@ exports.signup = async (req, res) => {
       const decodedToken = jwtDecode(token);
       const expiresAt = decodedToken.exp;
 
-      const { username, role, id, created, profilePhoto } = savedUser;
+      const { username, role, id, created, profilePhoto, walletAddress } = savedUser;
       const userInfo = {
         username,
         role,
         id,
         created,
-        profilePhoto
+        profilePhoto,
+        walletAddress
       };
 
       return res.json({
@@ -91,7 +95,7 @@ exports.authenticate = async (req, res) => {
       const decodedToken = jwtDecode(token);
       const expiresAt = decodedToken.exp;
       const { username, role, id, created, profilePhoto } = user;
-      const userInfo = { username, role, id, created, profilePhoto };
+      const userInfo = { username, role, id, created, profilePhoto};
 
       res.json({
         message: 'Authentication successful!',
