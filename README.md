@@ -12,7 +12,7 @@
 * So far there is no admin specific role to keeps thing decentralized.
 * The projects data storage and reterivation is moving to orbitdb/filecoin so it can totally be decentralized.
 
-# Glimpse of Projects
+# Glimpse of Project
 ## Main Page
 <img src="https://i.ibb.co/6FnMvDG/Main-PTezos.png" /><br/>
 
