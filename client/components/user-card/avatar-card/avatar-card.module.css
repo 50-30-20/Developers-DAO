@@ -1,3 +1,4 @@
+
 .avatarCard {
   box-shadow: inset 0 10em 0 var(--black-050);
   border: 1px solid var(--black-100);
@@ -50,4 +51,80 @@
 
 .copyP:hover{
   cursor: pointer;
+}
+
+.ConnectWallet{
+  text-decoration: none;
+  color: black;
+}
+
+.modal_main{
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  background: linear-gradient(to right,rgb(75, 153, 241), rgb(70, 82, 247));
+  margin-left: 340px;
+  border: 3px solid rgb(115, 117, 253);
+  color: white;
+  margin-top: -100px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.input{
+  width: 350px;
+  height: 40px;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.hello{
+  h1{
+    font-size: 32px;
+    padding: 20px 0px;
+    font-weight: 650;
+  }
+}
+
+.inputText{
+  label{
+    font-weight: bold;
+  }
+}
+
+.btn{
+  width: 160px;
+  height: 30px;
+  background-color: white;
+  margin: 10px 0px;
+  border-radius: 5px;
+  font-size: 19px;
+  font-weight: 550;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: rgb(247, 240, 231);
+}
+
+.btn_close {
+  width: 80px;
+  height: 35px;
+  background-color: #f81a4a;
+  margin-top: 5px;
+  border-radius: 10%;
+  font-size: 19px;
+  font-weight: 550;
+  color: aliceblue;
+}
+
+.btn_close:hover{
+  cursor: pointer;
+  background-color: #ff0037;
+}
+
+.reward{
+  margin-left: 60px;
+  font-weight: 550;
 }
