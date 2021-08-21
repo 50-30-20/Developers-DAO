@@ -25,4 +25,24 @@
 ## Qna And Tipping Page
 <img src="https://i.ibb.co/Z6KR0zM/Que-Ans-Tezos.png" /><br/>
 
+## Reward Transaction
+<img src="https://i.ibb.co/S3Hk1qd/send-MTezos.png" /><br/>
+
+## Successfull Transaction
+<img src="https://i.ibb.co/WtJmXgd/Whats-App-Image-2021-08-22-at-03-50-42.jpg" /><br/>
+
+# Project setup
+* The client and server are in sepearate folders but can be run together using the help of concurently package.
+* https://www.npmjs.com/package/concurrently
+
+```
+1. git clone https://github.com/50-30-20/Developers-DAO.git
+2. yarn / npm i (At the root of the project)
+3. cd client 
+4. yarn / npm i (In client folder)
+5. cd server 
+6. yarn / npm i (In server folder)
+7. yarn start / npm run start
+```
+
 
