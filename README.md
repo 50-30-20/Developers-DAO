@@ -6,6 +6,9 @@
 * The Dao has an implementation of P2P tipping mechanism, this mechanism encourages the devs help and participate.
 * The tokenization of valid answers gives it a different touch in form of badges. 
 
+## Explainnatory Video
+* https://youtu.be/XhmOMJywZR0
+
 # Architecture
 * Users logins in with username, walletaddress etc.
 * User can be both questioner/resolver.
