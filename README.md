@@ -13,4 +13,9 @@
 * The projects data storage and reterivation is moving to orbitdb/filecoin so it can totally be decentralized.
 
 # Glimpse of Projects
-<img src="https://i.ibb.co/ySvnpMD/Login-Tezos.png" />
+## Main Page
+<img src="https://i.ibb.co/6FnMvDG/Main-PTezos.png" /><br/>
+
+## Temple Wallet Connection
+<img src=" https://i.ibb.co/TLx0Pxh/Con-Wallet-Tezos.png" /><br/>
+
