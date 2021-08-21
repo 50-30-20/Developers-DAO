@@ -11,6 +11,7 @@ const createToken = (user) => {
     {
       id: user._id,
       username: user.username,
+      walletAddress: user.walletAddress,
       role: user.role
     },
     config.jwt.secret,

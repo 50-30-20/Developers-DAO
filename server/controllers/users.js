@@ -143,6 +143,7 @@ exports.find = async (req, res, next) => {
   }
 };
 
+
 exports.validateUser = [
   body('username')
     .exists()

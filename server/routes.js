@@ -4,7 +4,8 @@ const {
   authenticate,
   listUsers,
   search,
-  find
+  find,
+  findw
 } = require('./controllers/users');
 const {
   loadQuestions,
