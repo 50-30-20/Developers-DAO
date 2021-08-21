@@ -8,6 +8,7 @@
 
 ## Explainnatory Video
 * https://youtu.be/XhmOMJywZR0
+* The code is deployed to work on both florence and edo2 testnet.
 
 # Architecture
 * Users logins in with username, walletaddress etc.
