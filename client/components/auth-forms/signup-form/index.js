@@ -99,7 +99,7 @@ const SignupForm = () => {
             type="text"
             name="walletAddress"
             autoComplete="off"
-            value={wdd}
+            value={values.walletAddress}
             onChange={handleChange}
             onClick={connectWallet}
             hasError={touched.walletAddress && errors.walletAddress}
