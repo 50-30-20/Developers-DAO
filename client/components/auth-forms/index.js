@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 
-import { Logo } from '../icons'
 import LoginForm from './login-form'
 import SignUpForm from './signup-form'
 
@@ -13,10 +12,10 @@ const AuthForms = ({ screen = 'signup' }) => {
   return (
     <div className={styles.authModal}>
       <Head>
-        <title>{form == 'login' ? 'Log In' : 'Sign Up'} - Clone of Stackoverflow</title>
+        <title>{form == 'login' ? 'Log In' : 'Sign Up'} - Tezos overflow</title>
       </Head>
 
-      <Logo className={styles.logo} />
+      <img src = {'https://akashghost.github.io/hostedassets/tezos-coin.svg'} alt='Tezos Logo' width ='110' height='110' />
 
       {form === 'login' ? <LoginForm /> : <SignUpForm />}
 

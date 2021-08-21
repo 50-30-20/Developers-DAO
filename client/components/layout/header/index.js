@@ -1,10 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
-// import logoPng from './Tezos_logo.png'
-// import ImageLoader from 'react-load-image';
-// import logo from './tezos-coin.svg';
-import logosvg from '../../icons/Logo';
  
 import useComponentVisible from '../../../hooks/useComponentVisible'
 import useWindowSize from '../../../hooks/useWindowSize'
@@ -48,10 +44,6 @@ const Header = ({ className, ...props }) => {
           </Button>
         </div>
         <Button className={styles.logo} href="/">
-          {/* <Logo /> */}
-
-          {/* <ImageLoader src={logoPng}><img /></ImageLoader> */}
-          {/* <img src={logoPng} alt=''/> */}
     
           <p className={styles.logo}><img src={'https://akashghost.github.io/hostedassets/tezos-coin.svg'} alt='svg' width = '55' height = '55' /></p>
           

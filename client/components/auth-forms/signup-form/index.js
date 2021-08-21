@@ -17,22 +17,26 @@ import { ThanosWallet } from '@thanos-wallet/dapp';
 
 const Tezos = new TezosToolkit('https://testnet-tezos.giganode.io');
 
-const connectWallet =()=> ThanosWallet.isAvailable()
-  .then(() => {
-    const mywallet = new ThanosWallet('MyAwesomeDapp');
-    mywallet.connect('granadanet').then(() => {
-      Tezos.setWalletProvider(mywallet);
-      return mywallet.getPKH()}).then((pkh) => {
-     console.log(`Your address: ${pkh}`);
-    });
-  })
-  .catch((err) => console.log(err));
+
 
 const SignupForm = () => {
   const { setAuthState } = useContext(AuthContext)
   const { setIsComponentVisible } = useContext(ModalContext)
 
   const [loading, setLoading] = useState(false)
+  const [wdd, setwdd] = useState(null)
+
+  const connectWallet =()=> ThanosWallet.isAvailable()
+  .then(() => {
+    const mywallet = new ThanosWallet('MyAwesomeDapp');
+    mywallet.connect('granadanet').then(() => {
+      Tezos.setWalletProvider(mywallet);
+      return mywallet.getPKH()}).then((pkh) => {
+        setwdd(pkh)
+     console.log(`Your address: ${pkh}`);
+    });
+  })
+  .catch((err) => console.log(err));
 
   return (
     <Formik
@@ -57,7 +61,7 @@ const SignupForm = () => {
           .matches(/^[a-zA-Z0-9_-]+$/, 'Contains invalid characters'),
         walletAddress: Yup.string()
           .required('Required')
-          .max(26, 'Must be at most 16 characters long'),
+          .max(100, 'Must be at most 16 characters long'),
         password: Yup.string()
           .required('Required')
           .min(6, 'Must be at least 6 characters long')
@@ -95,7 +99,7 @@ const SignupForm = () => {
             type="text"
             name="walletAddress"
             autoComplete="off"
-            value={values.walletAddress}
+            value={wdd}
             onChange={handleChange}
             onClick={connectWallet}
             hasError={touched.walletAddress && errors.walletAddress}
